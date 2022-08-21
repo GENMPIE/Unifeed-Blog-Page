@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unifeed</title>
+    <link rel="icon" type="image/svg+xml" href="./Assets/Favicon.svg">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <header class="container">
+        <div class="logo">
+            <img src="./Assets/Favicon.svg" alt="Logo SVG">
+        </div>
+        <nav class="links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li class="btn btn-primary"><a href="#">Subscribe</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <img src="./Assets/Hamburger Menu.svg" alt="Hamburger Icon">
+        </div>
+    </header>
+
+    <section class="home-blogs container">
+        
+        <article class="blog blog-big">
+            <div class="blog-image">
+                <img src="./Assets/Main Article Image.png" alt="Weekly Newsletter: Tweets for Higher Engagements Image">
+            </div>
+            <div class="blog-information">
+                <h2 class="blog-title">Weekly Newsletter: Tweets for Higher Engagements</h2>
+                <p>In this Weekly newsletter, we will be covering ten types of engaging tweest. This is the guid if you're just starting out on Twitter.</p>
+                <div class="blog-author-information">
+                    <div class="author-image">
+                        <img src="./Assets/User Avatar.png" alt="Jessica Andrews Image">
+                    </div>
+                    <div class="author-information">
+                        <span class="author-name">Jessica Andrews</span>
+                        <span class="author-role">Content Manager</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="blog">
+            <div class="blog-image">
+                <img src="./Assets/Article 1 Image.png" alt="7 Tips for Organic Traffic Image">
+            </div>
+            <div class="blog-information">
+                <h2 class="blog-title">7 Tips for Organic Traffic</h2>
+                <p>From SEO to integrating with Paid Advertising, this article covers it all.</p>
+                <div class="blog-author-information">
+                    <div class="author-image">
+                        <img src="./Assets/User Avatar-1.png" alt="Spencer David Image">
+                    </div>
+                    <div class="author-information">
+                        <span class="author-name">Spencer David</span>
+                        <span class="author-role">SEO Specialist</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="blog">
+            <div class="blog-image">
+                <img src="./Assets/Article 2 Image.png" alt="How To Start Your Own Business Image">
+            </div>
+            <div class="blog-information">
+                <h2 class="blog-title">How To Start Your Own Business</h2>
+                <p>Starting your own business in 2021 has never been easier.</p>
+                <div class="blog-author-information">
+                    <div class="author-image">
+                        <img src="./Assets/User Avatar-2.png" alt="Sara Frey Image">
+                    </div>
+                    <div class="author-information">
+                        <span class="author-name">Sara Frey</span>
+                        <span class="author-role">Business Leader</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="blog">
+            <div class="blog-image">
+                <img src="./Assets/Article 3 Image.png" alt="5 Tips for Better Branding Image">
+            </div>
+            <div class="blog-information">
+                <h2 class="blog-title">5 Tips for Better Branding</h2>
+                <p>From SEO to integrating with Paid Advertising, this article covers it all.</p>
+                <div class="blog-author-information">
+                    <div class="author-image">
+                        <img src="./Assets/User Avatar-3.png" alt="David Suns Image">
+                    </div>
+                    <div class="author-information">
+                        <span class="author-name">David Suns</span>
+                        <span class="author-role">Brand Manager</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="./Assets/Logo.svg" alt="Unifeed Logo">
+            </div>
+            <p class="copyright-text">
+                Unifeed &copy; <script>document.write(new Date().getFullYear());</script> All Copyrights Not Reserved
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerMenu = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('header.container nav.links');
+
+        hamburgerMenu.addEventListener("click", function() {
+        navLinks.classList.toggle('nav-active') 
+        });
+    </script>
+
+</body>
+</html>

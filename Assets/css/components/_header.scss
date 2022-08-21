@@ -1,0 +1,123 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px !important;
+
+    nav.links {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        transform: translateX(-100%);
+
+        background-color: #f5f5f5;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
+
+        transition: all .5s ease-in-out;
+
+        &.nav-active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        @include breakpoint('small') {
+            position: relative;
+            width: auto;
+            height: auto;
+            transform: translateX(0);
+            opacity: 1;
+            transition: none;
+            background-color: transparent;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 80px 0;
+
+            @include breakpoint('small') {
+                padding: 0;
+                display: flex;
+                align-items: center;
+                gap: 25px;
+            }
+
+            li {
+                width: 100%;
+                position: relative;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid gray;
+
+                    @include breakpoint('small') {
+                        border-bottom: none;
+                    }
+                }
+
+
+                @include breakpoint('small') {
+                    &.btn {
+                        background-color: #EE7C0D;
+                        border-radius: 4px;
+
+                        transition: background-color .2s ease-in-out;
+
+                        &:hover {
+                            background-color: lighten(#EE7C0D, 10%);
+                        }
+
+                        a {
+                            padding: 10px 20px;
+                            color: #000;
+                            font-weight: 700;
+
+                            &:hover {
+                                color: lighten(#000, 10%);
+                            }
+                        }
+                    }
+                }
+
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    font-weight: 700;
+                    display: block;
+                    padding: 20px;
+                    width: 100%;
+
+                    &::after {
+                        content: '\203A';
+                        position: absolute;
+                        top: 50%;
+                        right: 45px;
+                        transform: translateY(-50%);
+                        font-size: 28px;
+                    }
+
+                    @include breakpoint('small') {
+                        color: #656565;
+                        font-weight: 500;
+                        padding: 0;
+
+                        &::after {
+                            content: ''
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .hamburger {
+        z-index: 100;
+        cursor: pointer;
+
+        @include breakpoint('small') {
+            display: none;
+        }
+    }
+}

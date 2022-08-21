@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
+@import 'breakpoints';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: table;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+
+    @include breakpoint('small') {
+        width: 540px;
+    }
+
+    @include breakpoint('medium') {
+        width: 720px;
+    }
+
+    @include breakpoint('large') {
+        width: 960px;
+    }
+}
+
+img, svg {
+    max-width: 100%;
+}
+
+@import './components/header';
+@import './components/home-blogs';
+@import './components/footer';
