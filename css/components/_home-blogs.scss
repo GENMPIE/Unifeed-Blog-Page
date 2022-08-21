@@ -1,0 +1,36 @@
+section.home-blogs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    
+    @include breakpoint('medium') {
+        grid-template-columns: repeat(2, 1fr);
+
+        .blog-big {
+            grid-column: 1/-1;
+            display: grid;
+            grid-template-columns: calc(40% - 30px) calc(60% - 30px);
+            align-content: center;
+            gap: 60px;
+
+            .blog-image {
+                margin-bottom: 0 !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 100% !important;
+                    height: 100% !important;
+                    max-height: 100% !important;
+                }
+            }
+        }
+    }
+
+    @include breakpoint('large') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @import 'home-blogs-article';
+}

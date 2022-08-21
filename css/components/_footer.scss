@@ -1,0 +1,22 @@
+footer {
+    display: table-row;
+    height: 0;
+
+    .container {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+
+        color: #656565;
+        font-weight: 500;
+
+        @include breakpoint('small') {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+}
